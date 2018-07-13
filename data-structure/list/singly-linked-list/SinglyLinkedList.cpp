@@ -116,3 +116,35 @@ bool SinglyLinkedList::insertNode(int i, Node *pNode)
 
     return true;
 }
+
+/**
+ * 删除指定位置的结点
+ * @param i 取值范围：[1, m_iLength]
+ * @param pNode
+ */
+bool SinglyLinkedList::deleteNode(int i, Node *pNode)
+{
+    if (isEmpty() || i < 1 || i > m_iLength)
+    {
+        return false;
+    }
+
+    Node *prevNode = m_pList;
+    Node *curNode = m_pList->next;
+    for (int j = 1; j < i; j++)
+    {
+        prevNode = curNode;
+        curNode = curNode->next;
+    }
+
+    prevNode->next = curNode->next;
+
+    // 保存被删除结点的数据域的值
+    pNode->data = curNode->data;
+    delete curNode;
+    curNode = nullptr;
+
+    m_iLength--;
+
+    return true;
+}
