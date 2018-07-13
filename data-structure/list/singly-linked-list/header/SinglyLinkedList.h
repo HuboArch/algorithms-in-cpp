@@ -24,7 +24,7 @@ public:
 
     void insertTail(Node *pNode);
 
-    bool insert(int i, Node *pNode);
+    bool insertNode(int i, Node *pNode);
 
 private:
     Node *m_pList;
