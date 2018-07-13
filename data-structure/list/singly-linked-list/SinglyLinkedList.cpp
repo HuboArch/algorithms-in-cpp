@@ -65,6 +65,8 @@ void SinglyLinkedList::insertHead(Node *pNode)
     newNode->next = tmpCell;
 
     m_pList->next = newNode;
+
+    m_iLength++;
 }
 
 /**
@@ -84,4 +86,6 @@ void SinglyLinkedList::insertTail(Node *pNode)
     newNode->next = nullptr;
 
     p->next = newNode;
+
+    m_iLength++;
 }
