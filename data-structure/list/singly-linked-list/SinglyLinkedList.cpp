@@ -20,6 +20,22 @@ SinglyLinkedList::~SinglyLinkedList()
 
 }
 
+/**
+ * 清空链表
+ */
+void SinglyLinkedList::clearList()
+{
+    Node *p = m_pList->next;
+
+    while (p != nullptr)
+    {
+        Node *tmpCell = p->next;
+        delete p;
+        p = tmpCell;
+    }
+    m_pList->next = nullptr;
+}
+
 bool SinglyLinkedList::isEmpty()
 {
     return m_iLength == 0;
