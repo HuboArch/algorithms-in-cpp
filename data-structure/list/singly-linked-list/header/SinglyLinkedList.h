@@ -14,6 +14,8 @@ public:
 
     ~SinglyLinkedList();
 
+    void clearList();
+
     bool isEmpty();
 
     int getLength();
