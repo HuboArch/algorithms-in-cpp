@@ -15,9 +15,15 @@ SinglyLinkedList::SinglyLinkedList()
     m_iLength = 0;
 }
 
+/**
+ * 销毁链表
+ */
 SinglyLinkedList::~SinglyLinkedList()
 {
+    clearList();
 
+    delete m_pList;
+    m_pList = nullptr;
 }
 
 /**
