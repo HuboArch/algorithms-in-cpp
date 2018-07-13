@@ -66,3 +66,22 @@ void SinglyLinkedList::insertHead(Node *pNode)
 
     m_pList->next = newNode;
 }
+
+/**
+ * 尾部插入结点
+ * @param pNode
+ */
+void SinglyLinkedList::insertTail(Node *pNode)
+{
+    Node *p = m_pList;
+    while (p->next != nullptr)
+    {
+        p = p->next;
+    }
+
+    auto *newNode = new Node;
+    newNode->data = pNode->data;
+    newNode->next = nullptr;
+
+    p->next = newNode;
+}

@@ -22,6 +22,8 @@ public:
 
     void insertHead(Node *pNode);
 
+    void insertTail(Node *pNode);
+
 private:
     Node *m_pList;
     int m_iLength;
