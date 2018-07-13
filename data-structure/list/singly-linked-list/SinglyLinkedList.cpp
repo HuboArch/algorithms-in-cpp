@@ -89,3 +89,30 @@ void SinglyLinkedList::insertTail(Node *pNode)
 
     m_iLength++;
 }
+
+/**
+ * 在指定位置插入结点
+ * @param i 要插入的位置 取值范围：[1, m_iLength + 1]
+ * @param pNode 要被插入的结点
+ */
+bool SinglyLinkedList::insert(int i, Node *pNode)
+{
+    if (i < 1 || i > m_iLength + 1)
+    {
+        return false;
+    }
+
+    Node *p = m_pList;
+    for (int j = 1; j < i; j++)
+    {
+        p = p->next;
+    }
+
+    auto newNode = new Node;
+    newNode->data = pNode->data;
+    newNode->next = p->next;
+
+    p->next = newNode;
+
+    return true;
+}
