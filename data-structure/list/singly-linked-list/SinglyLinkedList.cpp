@@ -51,3 +51,18 @@ int SinglyLinkedList::getLength()
 {
     return m_iLength;
 }
+
+/**
+ * 头部插入结点
+ * @param pNode
+ */
+void SinglyLinkedList::insertHead(Node *pNode)
+{
+    Node *tmpCell = m_pList->next;
+
+    auto *newNode = new Node;
+    newNode->data = pNode->data;
+    newNode->next = tmpCell;
+
+    m_pList->next = newNode;
+}

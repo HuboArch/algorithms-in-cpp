@@ -20,6 +20,8 @@ public:
 
     int getLength();
 
+    void insertHead(Node *pNode);
+
 private:
     Node *m_pList;
     int m_iLength;
