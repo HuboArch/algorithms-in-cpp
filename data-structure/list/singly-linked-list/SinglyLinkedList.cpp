@@ -193,3 +193,40 @@ int SinglyLinkedList::locateNode(Node *pNode)
 
     return -1;
 }
+
+bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
+{
+    Node *p = m_pList->next;
+
+    while (p->next != nullptr)
+    {
+        if (p->next->data == pCurNode->data)
+        {
+            pPrevNode = p;
+            return true;
+        }
+
+        p = p->next;
+    }
+
+    return false;
+}
+
+bool SinglyLinkedList::nextNode(Node *pCurNode, Node *pNextNode)
+{
+    Node *p = m_pList->next;
+
+    while (p != nullptr)
+    {
+        if (p->data == pCurNode->data)
+        {
+            pNextNode->data = p->next->data;
+
+            return true;
+        }
+
+        p = p->next;
+    }
+
+    return false;
+}

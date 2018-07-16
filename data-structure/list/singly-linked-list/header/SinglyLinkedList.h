@@ -32,6 +32,10 @@ public:
 
     int locateNode(Node *pNode);
 
+    bool prevNode(Node *pCurNode, Node *pPrevNode);
+
+    bool nextNode(Node *pCurNode, Node *pNextNode);
+
 private:
     Node *m_pList;
     int m_iLength;
