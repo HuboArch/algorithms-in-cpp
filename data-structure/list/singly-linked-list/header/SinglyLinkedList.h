@@ -26,7 +26,7 @@ public:
 
     bool insertNode(int i, Node *pNode);
 
-    bool SinglyLinkedList::deleteNode(int i, Node *pNode);
+    bool deleteNode(int i, Node *pNode);
 
 private:
     Node *m_pList;
