@@ -38,6 +38,8 @@ public:
 
     void traverseList();
 
+    void test(SinglyLinkedList * pList);
+
 private:
     Node *m_pList;
     int m_iLength;

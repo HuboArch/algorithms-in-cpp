@@ -9,5 +9,5 @@ using namespace std;
 
 void Node::printNode()
 {
-    cout << data << endl;
+    cout << data << " ";
 }

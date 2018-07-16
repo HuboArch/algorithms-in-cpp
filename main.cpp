@@ -3,10 +3,15 @@
 //
 
 #include <iostream>
+#include "data-structure/list/singly-linked-list/header/SinglyLinkedList.h"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello, World!" << endl;
+    auto *list = new SinglyLinkedList();
+
+    list->test(list);
+
     return 0;
 }

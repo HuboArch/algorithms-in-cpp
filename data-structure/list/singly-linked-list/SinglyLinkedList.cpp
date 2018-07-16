@@ -2,8 +2,11 @@
 // Created by dean on 2018/7/12.
 //
 
+#include <iostream>
 #include <cstdio>
 #include "header/SinglyLinkedList.h"
+
+using namespace std;
 
 SinglyLinkedList::SinglyLinkedList()
 {
@@ -255,4 +258,65 @@ void SinglyLinkedList::traverseList()
         p->printNode();
         p = p->next;
     }
+}
+
+/**
+ * 测试链表
+ * @param pList
+ */
+void SinglyLinkedList::test(SinglyLinkedList *pList)
+{
+    // 链表首部依次插入三个结点
+    Node n1{};
+    Node n2{};
+    Node n3{};
+
+    n1.data = 1;
+    n2.data = 2;
+    n3.data = 3;
+
+    pList->insertHead(&n1);
+    pList->insertHead(&n2);
+    pList->insertHead(&n3);
+
+//    pList->traverseList();
+
+    // 链表尾部插入结点
+    Node n4{};
+    Node n5{};
+    Node n6{};
+    n4.data = 4;
+    n5.data = 5;
+    n6.data = 6;
+
+    pList->insertTail(&n4);
+    pList->insertTail(&n5);
+    pList->insertTail(&n6);
+
+//    pList->traverseList();
+
+    // 链表中间位置插入结点
+    Node n7{};
+    n7.data = 7;
+
+    pList->insertNode(3, &n7);
+
+//    pList->traverseList();
+
+    // 删除指定位置的结点
+    Node tmpCell{};
+
+    pList->deleteNode(3, &tmpCell);
+
+    cout << "data field of the deleted node is: " << tmpCell.data << endl;
+
+//    pList->traverseList();
+
+    // 获取指定位置的结点
+    pList->getNode(2, &tmpCell);
+
+    cout << "tmpCell.data = " << tmpCell.data;
+
+    delete pList;
+    pList = nullptr;
 }
