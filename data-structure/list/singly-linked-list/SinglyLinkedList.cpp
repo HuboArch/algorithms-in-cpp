@@ -172,3 +172,24 @@ bool SinglyLinkedList::getElem(int i, Node *pNode)
 
     return true;
 }
+
+/**
+ * 获取指定结点的位置索引
+ * @param pNode 待匹配的结点
+ * @return 查找失败返回 -1
+ */
+int SinglyLinkedList::locateNode(Node *pNode)
+{
+    Node *p = m_pList->next;
+
+    for (int i = 1; p; i++)
+    {
+        if (p->data == pNode->data)
+        {
+            return i;
+        }
+        p = p->next;
+    }
+
+    return -1;
+}

@@ -30,6 +30,8 @@ public:
 
     bool getElem(int i, Node *pNode);
 
+    int locateNode(Node *pNode);
+
 private:
     Node *m_pList;
     int m_iLength;
