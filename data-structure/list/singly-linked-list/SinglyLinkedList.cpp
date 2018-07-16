@@ -194,6 +194,12 @@ int SinglyLinkedList::locateNode(Node *pNode)
     return -1;
 }
 
+/**
+ * 查找上一个结点元素
+ * @param pCurNode
+ * @param pPrevNode
+ * @return
+ */
 bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
 {
     Node *p = m_pList->next;
@@ -212,6 +218,12 @@ bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
     return false;
 }
 
+/**
+ * 查找下一个结点元素
+ * @param pCurNode
+ * @param pNextNode
+ * @return
+ */
 bool SinglyLinkedList::nextNode(Node *pCurNode, Node *pNextNode)
 {
     Node *p = m_pList->next;
@@ -231,6 +243,9 @@ bool SinglyLinkedList::nextNode(Node *pCurNode, Node *pNextNode)
     return false;
 }
 
+/**
+ * 遍历链表
+ */
 void SinglyLinkedList::traverseList()
 {
     Node *p = m_pList->next;
