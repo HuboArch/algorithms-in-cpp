@@ -36,6 +36,8 @@ public:
 
     bool nextNode(Node *pCurNode, Node *pNextNode);
 
+    void traverseList();
+
 private:
     Node *m_pList;
     int m_iLength;

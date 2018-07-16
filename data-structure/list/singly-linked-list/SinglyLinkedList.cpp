@@ -230,3 +230,14 @@ bool SinglyLinkedList::nextNode(Node *pCurNode, Node *pNextNode)
 
     return false;
 }
+
+void SinglyLinkedList::traverseList()
+{
+    Node *p = m_pList->next;
+
+    while (p != nullptr)
+    {
+        p->printNode();
+        p = p->next;
+    }
+}
