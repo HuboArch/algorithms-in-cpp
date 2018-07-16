@@ -28,7 +28,7 @@ public:
 
     bool deleteNode(int i, Node *pNode);
 
-    bool getElem(int i, Node *pNode);
+    bool getNode(int i, Node *pNode);
 
     int locateNode(Node *pNode);
 

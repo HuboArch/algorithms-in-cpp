@@ -155,7 +155,7 @@ bool SinglyLinkedList::deleteNode(int i, Node *pNode)
  * @param pNode
  * @return
  */
-bool SinglyLinkedList::getElem(int i, Node *pNode)
+bool SinglyLinkedList::getNode(int i, Node *pNode)
 {
     if (i < 1 || i > m_iLength)
     {
