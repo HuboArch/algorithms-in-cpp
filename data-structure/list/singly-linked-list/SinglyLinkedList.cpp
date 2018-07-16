@@ -148,3 +148,27 @@ bool SinglyLinkedList::deleteNode(int i, Node *pNode)
 
     return true;
 }
+
+/**
+ * 获取第 i 个结点
+ * @param i 取值范围：[1, m_iLength]
+ * @param pNode
+ * @return
+ */
+bool SinglyLinkedList::getElem(int i, Node *pNode)
+{
+    if (i < 1 || i > m_iLength)
+    {
+        return false;
+    }
+
+    Node *p = m_pList;
+    for (int j = 0; j < i; j++)
+    {
+        p = p->next;
+    }
+
+    pNode->data = p->data;
+
+    return true;
+}

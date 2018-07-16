@@ -28,6 +28,8 @@ public:
 
     bool deleteNode(int i, Node *pNode);
 
+    bool getElem(int i, Node *pNode);
+
 private:
     Node *m_pList;
     int m_iLength;
