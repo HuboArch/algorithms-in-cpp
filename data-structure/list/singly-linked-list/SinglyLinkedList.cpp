@@ -209,6 +209,11 @@ bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
 {
     Node *p = m_pList->next;
 
+    if (p == pCurNode)
+    {
+        return false;
+    }
+
     while (p->next != nullptr)
     {
         if (p->next->data == pCurNode->data)
@@ -219,7 +224,6 @@ bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
 
         p = p->next;
     }
-
     return false;
 }
 
