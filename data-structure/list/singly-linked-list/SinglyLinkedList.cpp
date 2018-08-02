@@ -145,7 +145,6 @@ bool SinglyLinkedList::deleteNode(int i, Node *pNode)
     // 保存被删除结点的数据域的值
     pNode->data = curNode->data;
     delete curNode;
-    curNode = nullptr;
 
     m_iLength--;
 
