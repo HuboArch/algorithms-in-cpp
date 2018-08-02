@@ -183,14 +183,17 @@ bool SinglyLinkedList::getNode(int i, Node *pNode)
 int SinglyLinkedList::locateNode(Node *pNode)
 {
     Node *p = m_pList->next;
+    int index = 1;
 
-    for (int i = 1; p; i++)
+    while (p != nullptr)
     {
         if (p->data == pNode->data)
         {
-            return i;
+            return index;
         }
+
         p = p->next;
+        index++;
     }
 
     return -1;
