@@ -205,18 +205,18 @@ int SinglyLinkedList::locateNode(Node *pNode)
  * @param pPrevNode
  * @return
  */
-bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
+bool SinglyLinkedList::prevNode(Node *pNode, Node *pPrevNode)
 {
     Node *p = m_pList->next;
 
-    if (p == pCurNode)
+    if (p == pNode)
     {
         return false;
     }
 
     while (p->next != nullptr)
     {
-        if (p->next->data == pCurNode->data)
+        if (p->next->data == pNode->data)
         {
             pPrevNode = p;
             return true;
@@ -233,13 +233,13 @@ bool SinglyLinkedList::prevNode(Node *pCurNode, Node *pPrevNode)
  * @param pNextNode
  * @return
  */
-bool SinglyLinkedList::nextNode(Node *pCurNode, Node *pNextNode)
+bool SinglyLinkedList::nextNode(Node *pNode, Node *pNextNode)
 {
     Node *p = m_pList->next;
 
     while (p != nullptr)
     {
-        if (p->data == pCurNode->data)
+        if (p->data == pNode->data)
         {
             pNextNode->data = p->next->data;
 
