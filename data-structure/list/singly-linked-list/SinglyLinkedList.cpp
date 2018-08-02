@@ -201,7 +201,7 @@ int SinglyLinkedList::locateNode(Node *pNode)
 
 /**
  * 查找上一个结点元素
- * @param pCurNode
+ * @param pNode 要查找的结点的数据域的值
  * @param pPrevNode
  * @return
  */
@@ -229,7 +229,7 @@ bool SinglyLinkedList::prevNode(Node *pNode, Node *pPrevNode)
 
 /**
  * 查找下一个结点元素
- * @param pCurNode
+ * @param pNode 传递要查找结点的数据域的值
  * @param pNextNode
  * @return
  */
@@ -242,7 +242,6 @@ bool SinglyLinkedList::nextNode(Node *pNode, Node *pNextNode)
         if (p->data == pNode->data)
         {
             pNextNode->data = p->next->data;
-
             return true;
         }
 
