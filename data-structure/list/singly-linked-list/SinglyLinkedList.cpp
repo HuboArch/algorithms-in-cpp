@@ -65,9 +65,9 @@ void SinglyLinkedList::insertHead(Node *pNode)
 
     auto *newNode = new Node;
     newNode->data = pNode->data;
-    newNode->next = tmpCell;
 
     m_pList->next = newNode;
+    newNode->next = tmpCell;
 
     m_iLength++;
 }
