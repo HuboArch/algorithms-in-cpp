@@ -183,7 +183,7 @@ bool SinglyLinkedList::getNode(int i, Node *pNode)
 int SinglyLinkedList::locateNode(Node *pNode)
 {
     Node *p = m_pList->next;
-    int index = 1;
+    int index = 0;
 
     while (p != nullptr)
     {
@@ -209,7 +209,7 @@ bool SinglyLinkedList::prevNode(Node *pNode, Node *pPrevNode)
 {
     Node *p = m_pList->next;
 
-    if (p == pNode)
+    if (p->data == pNode->data)
     {
         return false;
     }
