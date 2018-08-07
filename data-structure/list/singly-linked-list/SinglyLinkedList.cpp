@@ -152,20 +152,20 @@ bool SinglyLinkedList::deleteNode(int i, Node *pNode)
 }
 
 /**
- * 获取第 i 个结点数据域的值
- * @param i 取值范围：[1, m_iLength]
+ * 获取指定索引位置的结点数据域的值
+ * @param i 取值范围：[0, m_iLength - 1]
  * @param pNode
  * @return
  */
 bool SinglyLinkedList::getNode(int i, Node *pNode)
 {
-    if (i < 1 || i > m_iLength)
+    if (i < 0 || i > m_iLength - 1)
     {
         return false;
     }
 
     Node *p = m_pList->next;
-    for (int j = 1; j < i; j++)
+    for (int j = 0; j < i; j++)
     {
         p = p->next;
     }
