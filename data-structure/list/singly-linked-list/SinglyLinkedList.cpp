@@ -122,19 +122,19 @@ bool SinglyLinkedList::insertNode(int i, Node *pNode)
 
 /**
  * 删除指定位置的结点
- * @param i 取值范围：[1, m_iLength]
+ * @param i 取值范围：[0, m_iLength - 1]
  * @param pNode
  */
 bool SinglyLinkedList::deleteNode(int i, Node *pNode)
 {
-    if (isEmpty() || i < 1 || i > m_iLength)
+    if (i < 0 || i >= m_iLength)
     {
         return false;
     }
 
     Node *prevNode = m_pList;
     Node *curNode = m_pList->next;
-    for (int j = 1; j < i; j++)
+    for (int j = 0; j < i; j++)
     {
         prevNode = curNode;
         curNode = curNode->next;
