@@ -82,3 +82,23 @@ bool CircularQueue::EnQueue(int elem)
 
     return true;
 }
+
+/**
+ * 队头插入元素
+ * @param elem
+ * @return
+ */
+bool CircularQueue::DeQueue(int& elem)
+{
+    if (IsEmpty())
+    {
+        return false;
+    }
+
+    elem = m_pQueue[m_iHead++];
+    m_iHead %= m_iCapacity;
+
+    m_iLength--;
+
+    return true;
+}
