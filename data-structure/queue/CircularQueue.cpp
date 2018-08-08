@@ -3,6 +3,9 @@
 //
 
 #include "header/CircularQueue.h"
+#include <iostream>
+
+using namespace std;
 
 /**
  * 初始化环形队列
@@ -101,4 +104,15 @@ bool CircularQueue::DeQueue(int& elem)
     m_iLength--;
 
     return true;
+}
+
+/**
+ * 遍历循环队列
+ */
+void CircularQueue::Traverse()
+{
+    for (int i = m_iHead; i < m_iHead + m_iLength; i++)
+    {
+        cout << m_pQueue[i % m_iCapacity] << endl;
+    }
 }
