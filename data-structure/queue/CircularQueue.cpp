@@ -6,7 +6,6 @@
 
 /**
  * 初始化环形队列
- *
  * @param capacity
  */
 CircularQueue::CircularQueue(int capacity)
@@ -39,7 +38,6 @@ void CircularQueue::ClearQueue()
 
 /**
  * 判断队列是否为空
- *
  * @return bool
  */
 bool CircularQueue::IsEmpty() const
@@ -49,7 +47,6 @@ bool CircularQueue::IsEmpty() const
 
 /**
  * 判断队列是否已满
- *
  * @return bool
  */
 bool CircularQueue::IsFull() const
@@ -59,10 +56,29 @@ bool CircularQueue::IsFull() const
 
 /**
  * 获取队列长度
- *
  * @return int
  */
 int CircularQueue::GetLength() const
 {
     return m_iLength;
+}
+
+/**
+ * 队尾添加元素
+ * @param elem
+ * @return bool
+ */
+bool CircularQueue::EnQueue(int elem)
+{
+    if (IsFull())
+    {
+        return false;
+    }
+
+    m_pQueue[m_iTail++] = elem;
+    m_iTail %= m_iCapacity;
+
+    m_iLength--;
+
+    return true;
 }
