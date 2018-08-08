@@ -36,3 +36,13 @@ void CircularQueue::ClearQueue()
     m_iTail = 0;
     m_ilength = 0;
 }
+
+/**
+ * 判断队列是否为空
+ *
+ * @return bool
+ */
+bool CircularQueue::IsEmpty() const
+{
+    return m_ilength == 0;
+}
