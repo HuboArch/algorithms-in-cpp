@@ -14,7 +14,7 @@ CircularQueue::CircularQueue(int capacity)
     m_iCapacity = capacity;
     m_iHead = 0;
     m_iTail = 0;
-    m_ilength = 0;
+    m_iLength = 0;
     m_pQueue = new int[capacity];
 }
 
@@ -34,7 +34,7 @@ void CircularQueue::ClearQueue()
 {
     m_iHead = 0;
     m_iTail = 0;
-    m_ilength = 0;
+    m_iLength = 0;
 }
 
 /**
@@ -44,7 +44,7 @@ void CircularQueue::ClearQueue()
  */
 bool CircularQueue::IsEmpty() const
 {
-    return m_ilength == 0;
+    return m_iLength == 0;
 }
 
 /**
@@ -54,7 +54,7 @@ bool CircularQueue::IsEmpty() const
  */
 bool CircularQueue::IsFull() const
 {
-    return m_ilength == m_iCapacity;
+    return m_iLength == m_iCapacity;
 }
 
 /**
@@ -64,5 +64,5 @@ bool CircularQueue::IsFull() const
  */
 int CircularQueue::GetLength() const
 {
-    return m_ilength;
+    return m_iLength;
 }

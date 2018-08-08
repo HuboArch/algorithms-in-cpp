@@ -29,7 +29,7 @@ public:
 
 private:
     int *m_pQueue;      // 队列数组指针
-    int m_ilength;      // 队列长度
+    int m_iLength;      // 队列长度
     int m_iCapacity;    // 队列容量
     int m_iHead;        // 队头
     int m_iTail;        // 队尾
