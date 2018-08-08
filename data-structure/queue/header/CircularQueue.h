@@ -9,7 +9,7 @@
 class CircularQueue
 {
 public:
-    CircularQueue(int m_iCapacity); // 创建队列
+    explicit CircularQueue(int capacity); // 创建队列
 
     virtual ~CircularQueue();       // 销毁队列
 
