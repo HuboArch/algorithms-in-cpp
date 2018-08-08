@@ -7,7 +7,7 @@
 /**
  * 初始化环形队列
  *
- * @param capacity 
+ * @param capacity
  */
 CircularQueue::CircularQueue(int capacity)
 {
@@ -16,4 +16,13 @@ CircularQueue::CircularQueue(int capacity)
     m_iTail = 0;
     m_ilength = 0;
     m_pQueue = new int[capacity];
+}
+
+/**
+ * 销毁环形队列
+ */
+CircularQueue::~CircularQueue()
+{
+    delete[] m_pQueue;
+    m_pQueue = nullptr;
 }
