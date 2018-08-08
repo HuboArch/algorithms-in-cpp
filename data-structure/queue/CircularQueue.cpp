@@ -46,3 +46,13 @@ bool CircularQueue::IsEmpty() const
 {
     return m_ilength == 0;
 }
+
+/**
+ * 获取队列长度
+ *
+ * @return int
+ */
+int CircularQueue::GetLength() const
+{
+    return m_ilength;
+}
