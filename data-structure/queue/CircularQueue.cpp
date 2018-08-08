@@ -26,3 +26,13 @@ CircularQueue::~CircularQueue()
     delete[] m_pQueue;
     m_pQueue = nullptr;
 }
+
+/**
+ * 清空环形队列
+ */
+void CircularQueue::ClearQueue()
+{
+    m_iHead = 0;
+    m_iTail = 0;
+    m_ilength = 0;
+}
