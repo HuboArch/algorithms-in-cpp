@@ -17,6 +17,8 @@ public:
 
     bool IsEmpty() const;           // 判断是否为空
 
+    bool IsFull() const;            // 判断是否已满
+
     int GetLength() const;          // 获取队列长度
 
     bool EnQueue(int elem);         // 队尾添加元素

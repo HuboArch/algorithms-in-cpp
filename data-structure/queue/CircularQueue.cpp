@@ -48,6 +48,16 @@ bool CircularQueue::IsEmpty() const
 }
 
 /**
+ * 判断队列是否已满
+ *
+ * @return bool
+ */
+bool CircularQueue::IsFull() const
+{
+    return m_ilength == m_iCapacity;
+}
+
+/**
  * 获取队列长度
  *
  * @return int
