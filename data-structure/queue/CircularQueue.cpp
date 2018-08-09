@@ -81,7 +81,7 @@ bool CircularQueue::EnQueue(int elem)
     m_pQueue[m_iTail++] = elem;
     m_iTail %= m_iCapacity;
 
-    m_iLength--;
+    m_iLength++;
 
     return true;
 }
