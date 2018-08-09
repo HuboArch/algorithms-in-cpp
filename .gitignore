@@ -4,4 +4,4 @@
 node_modules
 package.json
 cmake-build-debug
-test.cpp
+main.cpp
