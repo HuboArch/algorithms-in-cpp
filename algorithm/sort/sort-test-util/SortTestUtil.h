@@ -47,6 +47,26 @@ namespace SortTestUtil
             cout << arr[i] << " ";
         cout << endl;
     }
+
+    /**
+     * 判断数组是否有序
+     * @tparam T 元素类型
+     * @param arr
+     * @param len 数组长度
+     * @return bool
+     */
+    template<typename T>
+    bool isSorted(T arr[], int len)
+    {
+        for (int i = 0; i < len - 1; i++)
+        {
+            if (arr[i] > arr[i + 1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 #endif //ALGORITHMS_IN_CPP_SORTUTIL_H
