@@ -13,6 +13,6 @@ set(SOURCE_FILES main.cpp
         data-structure/list/singly-linked-list/SinglyLinkedList.cpp
         data-structure/list/singly-linked-list/header/SinglyLinkedList.h
         data-structure/queue/CircularQueue.cpp data-structure/queue/header/CircularQueue.h
-        )
+        algorithm/sort/selection-sort/SelectionSort.h)
 
 add_executable(algorithms-in-cpp ${SOURCE_FILES})
