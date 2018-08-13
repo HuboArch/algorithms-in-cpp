@@ -67,6 +67,17 @@ namespace SortTestUtil
         }
         return true;
     }
+
+    template<typename T>
+    void testSortPerformance(const string& sortName, void(*sort)(T[], int), T arr[], int len)
+    {
+        clock_t startTime = clock();
+        sort();
+        clock_t endTime = clock();
+
+        assert(isSorted(arr, len));
+        cout << sortName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s" << endl;
+    }
 }
 
 #endif //ALGORITHMS_IN_CPP_SORTUTIL_H
