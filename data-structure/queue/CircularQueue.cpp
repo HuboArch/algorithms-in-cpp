@@ -87,7 +87,7 @@ bool CircularQueue::EnQueue(int elem)
 }
 
 /**
- * 队头插入元素
+ * 队头删除元素
  * @param elem
  * @return
  */
